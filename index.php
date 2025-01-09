@@ -51,7 +51,7 @@ include "koneksi.php";
         <section id="home" class="isi text-center p-5 bg-secondary-subtle">
             <div class="container">
                 <div class="d-lg-flex flex-lg-row-reverse align-items-center">
-                    <img src="r1m.jpg" alt="default" class="img-fluid" width="600"/>
+                    <img src="asset/r1m.jpg" alt="default" class="img-fluid" width="600"/>
                     <div class="p-2">
                         <h1 class="fw-bold display-4 text-sm-start">Welcome to Donny's Journal</h1>
                         <h4 class="lead display-6 text-sm-start">
@@ -271,7 +271,7 @@ include "koneksi.php";
             <div class=" flex-md-row text-center justify-content-center">
                 <div class="fw-bold display-4 pb-5">Profile Mahasiswa</div>
                 <div class="d-lg-flex flex-md-row align-items-center justify-content-evenly">
-                <img src="udinus.jpg" alt="default" class="img-fluid rounded-circle" width="300"/>  
+                <img src="asset/udinus.jpg" alt="default" class="img-fluid rounded-circle" width="300"/>  
                 <div class="profile-details p-2">
                     <h2 class="fw-bold text-center">Donny Amanullah Putra Rahman</h2>
                     <h6 class="text-muted text-center mb-4">Mahasiswa Teknik Informatika Kelas Unggulan'2023</h6>
