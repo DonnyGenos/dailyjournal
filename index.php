@@ -99,20 +99,26 @@ include "koneksi.php";
         <!-- article end -->
 
         <!-- Gallery -->
-        <section id="gallery" class="text-center p-5 bg-secondary-subtle">
-            <div class="container">
-                <h1 class="fw-bold display-4 pb-3"> Gallery </h1>
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="dncc1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="dncc2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="dncc3.jpg" class="d-block w-100" alt="...">
-                      </div>
+        <section id="galeri" class="text-center p-5 bg-secondary-subtle">
+        <div class="container">
+            <h1 class="fw-bold display-4 pb-3">Gallery</h1>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+            <?php
+            $sql = "SELECT * FROM galeri ORDER BY tanggal DESC";
+            $hasil = $conn->query(query: $sql);
+            $isActive = true; 
+
+            while($row = $hasil->fetch_assoc()){
+                $activeClass = $isActive ? 'active': '';
+                $isActive = false;
+            ?>
+                <div class="carousel-item <?= $activeClass ?>">
+                    <img src="asset/<?= $row["gambar"] ?>" class="d-block w-100" alt="<?= $row['judul'] ?>" />
+                </div>
+                <?php
+            }
+            ?> 
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
